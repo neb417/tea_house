@@ -33,6 +33,7 @@ RSpec.describe 'Create subscriptions' do
       expect(subscription_response[:data]).to have_key :success
       expect(subscription_response[:data][:success]).to eq('Your subscriptions have been updated')
       expect(customer.subscriptions.first.cancelled?).to be true
+      expect(customer.subscriptions.size).to eq 1
     end
   end
 end
