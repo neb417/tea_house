@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SubscriptionSerializer
   def self.new_subscription(subscription)
     {
