@@ -11,6 +11,7 @@ RSpec.describe 'Create subscriptions' do
       'customer_id': customers.first.id,
       'tea_id': teas.first.id,
       'title': teas.first.title,
+      'price': 599,
       'frequency': 14
     }
 
@@ -36,7 +37,7 @@ RSpec.describe 'Create subscriptions' do
     expect(subscription_response[:data]).to have_key :tea
     expect(subscription_response[:data][:tea]).to have_key :title
     expect(subscription_response[:data][:tea]).to have_key :description
-    expect(subscription_response[:data][:tea]).to have_key :tempurature
+    expect(subscription_response[:data][:tea]).to have_key :temperature
     expect(subscription_response[:data][:tea]).to have_key :brew_time
   end
 end
