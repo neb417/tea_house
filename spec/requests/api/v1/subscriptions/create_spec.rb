@@ -3,24 +3,24 @@
 require 'rails_helper'
 
 RSpec.describe 'Create subscriptions' do
-  let!(:customers) { create_list :customers, 3 }
-  let!(:teas) { create_list :teas, 5 }
+  let!(:customers) { create_list :customer, 3 }
+  let!(:teas) { create_list :tea, 5 }
 
   it 'customer subscribes to a tea' do
     sub_params = {
-      'customer_id': customer.first.id,
-      'tea_id': tea.first.id,
-      'title': tea.first.title,
+      'customer_id': customers.first.id,
+      'tea_id': teas.first.id,
+      'title': teas.first.title,
       'frequency': 14
     }
 
     headers = { 'CONTENT_TYPE' => 'application/json' }
 
-    post api_v1_subscription_path, headers: headers, params: JSON.generate(subscription: sub_params)
+    post api_v1_subscriptions_path, headers: headers, params: JSON.generate(subscription: sub_params)
 
     subscription_response = JSON.parse(response.body, symbolize_names: true)
 
-    user = user.first
+    user = customers.first
 
     expect(user.subscriptions.count).to eq 1
     expect(user.subscriptions.first.active?).to be true
