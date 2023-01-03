@@ -10,9 +10,14 @@ module Api
         if subscription.save
           render json: SubscriptionSerializer.new_subscription(subscription)
         else
-          # binding.pry
           render json: { data: { error: subscription.errors.full_messages.to_sentence } }, status: 400
         end
+      end
+
+      def update
+        subscription = Subscription.find(params[:subscription][:id])
+        subscription.update(subscription_params)
+        render json: { 'data': { 'success': 'Your subscriptions have been updated' } }
       end
 
       private
