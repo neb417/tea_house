@@ -20,6 +20,12 @@ module Api
         render json: { 'data': { 'success': 'Your subscriptions have been updated' } }
       end
 
+      def index
+        customer = Customer.find(params[:subscription][:customer_id])
+        subscriptions = customer.subscriptions
+        render json: SubscriptionSerializer.customer_subscriptions(subscriptions)
+      end
+
       private
 
       def subscription_params
