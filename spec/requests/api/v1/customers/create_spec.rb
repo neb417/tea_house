@@ -13,7 +13,7 @@ RSpec.describe 'Create subscriptions' do
       }
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      post api_v1_users_path, headers: headers, params: JSON.generate(customer_params)
+      post api_v1_customers_path, headers: headers, params: JSON.generate(customer_params)
 
       customer_response = JSON.parse(response.body, symbolize_names: true)
 
