@@ -60,7 +60,7 @@ RSpec.describe 'Create subscriptions' do
       get api_v1_subscriptions_path(subscription: customer_info), headers: headers
 
       subscription_response = JSON.parse(response.body, symbolize_names: true)
-binding.pry
+
       expect(response).to be_successful
       expect(response.status).to eq 200
       expect(subscription_response[:data]).to have_key :subscriptions
