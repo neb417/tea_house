@@ -105,11 +105,17 @@ The Tea House backend is build on Rails 5.2.8.1 and Ruby 2.7.4
 
 ---------
 
-
-
-## Endpoints
+## Endpoints and Testing in Postman
 
 * GET a customer subsctriptions by customer id
+```sh
+Postman:
+GET http://localhost:3000/api/v1/subscriptions
+
+query params
+  key: customer_id
+  value: 2
+```
 
 ```sh
 {
@@ -160,6 +166,18 @@ The Tea House backend is build on Rails 5.2.8.1 and Ruby 2.7.4
 ```
 
 * CREATE a customer subscription
+```sh
+Postman:
+POST http://localhost:3000/api/v1/subscriptions
+
+query params
+  key: customer_id, value: 2
+  key: tea_id, value: 1
+  key: title, value: English Breakfast
+  key: frequency, value: 7
+  key: price, value: 500
+```
+
 
 ```sh
 {
@@ -180,7 +198,18 @@ The Tea House backend is build on Rails 5.2.8.1 and Ruby 2.7.4
 ```
 
 * UPDATE a customer subscription
+```sh
+Postman:
+PUT http://localhost:3000/api/v1/subscriptions/4
 
+query params
+  key: id, value: 4
+  key: customer_id, value: 2
+  key: tea_id, value: 1
+  key: frequency, value: 7
+  key: price, value: 500
+  status: cancelled
+```
 ```sh
 {
     "data": {
@@ -188,8 +217,31 @@ The Tea House backend is build on Rails 5.2.8.1 and Ruby 2.7.4
     }
 }
 ```
----------
 
+* CREATE a customer
+```sh
+Postman:
+POST http://localhost:3000/api/v1/customers
+
+query params
+  key: first_name, value: Jerry
+  key: last_name, value: Johnson
+  key: email, value: mail@mail.com
+  key: address, value: 123 South St, Town, ST, 12345
+```
+
+```sh
+{
+    "data": {
+        "id": 6,
+        "first_name": "Jerry",
+        "last_name": "Johnson",
+        "email": "mail@mail.com",
+        "address": "123 South St, Town, ST, 12345"
+    }
+}
+```
+---------
 <div align="center">
 
 #### Gem Documentation
