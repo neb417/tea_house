@@ -237,9 +237,9 @@ Project Link: [Tea House](https://github.com/neb417/tea_house)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 </div>
 
-[contributors-shield]: https://img.shields.io/github/contributors/Eat-Local/eat-local-be.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/neb417/tea_house.svg?style=for-the-badge
 [contributors-url]: https://github.com/neb417/tea_house/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Eat-Local/eat-local-be.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/neb417/tea_house.svg?style=for-the-badge
 [forks-url]: https://github.com/neb417/tea_house/network/members
-[issues-shield]: https://img.shields.io/github/issues/Eat-Local/eat-local-be.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/neb417/tea_house.svg?style=for-the-badge
 [issues-url]: https://github.com/neb417/tea_house/issues
