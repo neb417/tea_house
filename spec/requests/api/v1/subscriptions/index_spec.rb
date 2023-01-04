@@ -25,7 +25,7 @@ RSpec.describe 'Create subscriptions' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      get api_v1_subscriptions_path(subscription: customer_info), headers: headers
+      get api_v1_subscriptions_path(customer_info), headers: headers
 
       subscription_response = JSON.parse(response.body, symbolize_names: true)
 
@@ -57,7 +57,7 @@ RSpec.describe 'Create subscriptions' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      get api_v1_subscriptions_path(subscription: customer_info), headers: headers
+      get api_v1_subscriptions_path(customer_info), headers: headers
 
       subscription_response = JSON.parse(response.body, symbolize_names: true)
 
