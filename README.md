@@ -3,7 +3,7 @@
 <h1 align="center"><strong>Tea House</strong></h1>
 
   <p align="center">
-    <h2> A Backend microserice to perform CRUD functionality for customer tea subcriptions</h2>
+    <h2> A Backend microservice to perform CRUD functionality for customer tea subcriptions</h2>
     <br />
     <a href="https://github.com/neb417/tea_house"><strong>Explore the docs »</strong></a>
     <br />
