@@ -3,7 +3,6 @@
 module Api
   module V1
     class CustomersController < ApplicationController
-
       def create
         customer = Customer.new(customer_params)
 
