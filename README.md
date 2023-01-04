@@ -89,6 +89,8 @@ The Tea House backend is build on Rails 5.2.8.1 and Ruby 2.7.4
 
 1. Seed development/test database with `$rails db:seed`
 
+1. Run test suite with `$bundle exec rspec`
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 --------
