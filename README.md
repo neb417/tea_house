@@ -18,7 +18,7 @@
 
 # About The Project
 <details>
-  <h1><summary>Table of Contents</summary></h1>
+  <h3><summary>Table of Contents</summary></h3>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
