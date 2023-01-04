@@ -72,18 +72,15 @@ The Tea House backend is build on Rails 5.2.8.1 and Ruby 2.7.4
    In group :development, :test do
 
    ```sh
-   gem 'capybara'
-   gem 'factory_bot_rails'
-   gem 'faker'
-   gem 'pry'
-   gem 'rspec-rails'
-   gem 'rubocop'
-   gem 'rubocop-faker'
-   gem 'rubocop-rails'
-   gem 'shoulda-matchers'
-   gem 'simplecov'
-   gem 'vcr'
-   gem 'webmock'
+    gem 'capybara'
+    gem 'factory_bot_rails'
+    gem 'faker'
+    gem 'pry'
+    gem 'rspec-rails'
+    gem 'rubocop-faker'
+    gem 'rubocop-rails'
+    gem 'shoulda-matchers'
+    gem 'simplecov'
    ```
 
 1. Install Gems with `$bundle install`
@@ -206,16 +203,14 @@ The Tea House backend is build on Rails 5.2.8.1 and Ruby 2.7.4
   <tr>
     <td align="center"><a href="https://github.com/pry/pry">pry</a></td>
     <td align="center"><a href="https://github.com/rspec/rspec-rails">rspec-rails</a></td>
-    <td align="center"><a href="https://github.com/rubocop/rubocop-rails">rubocop</a></td>
+    <td align="center"><a href="https://github.com/rubocop/rubocop-rails">rubocop-faker</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/koic/rubocop-faker">rubocop-faker</a></td>
+    <td align="center"><a href="https://github.com/koic/rubocop-faker">rubocop-rails</a></td>
     <td align="center"><a href="https://github.com/thoughtbot/shoulda-matchers">shoulda-matchers</a></td>
     <td align="center"><a href="https://github.com/simplecov-ruby/simplecov">simplecov</a></td>
   </tr>
 </table>
-
-
 </div>
 
 ------
