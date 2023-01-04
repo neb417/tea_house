@@ -16,7 +16,7 @@ module Api
       private
 
       def customer_params
-        params.require(:customer).permit(
+        params.permit(
           :first_name,
           :last_name,
           :email,
