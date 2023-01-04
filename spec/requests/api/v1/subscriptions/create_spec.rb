@@ -18,7 +18,7 @@ RSpec.describe 'Create subscriptions' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      post api_v1_subscriptions_path, headers: headers, params: JSON.generate(subscription: sub_params)
+      post api_v1_subscriptions_path, headers: headers, params: JSON.generate(sub_params)
 
       subscription_response = JSON.parse(response.body, symbolize_names: true)
 
@@ -54,7 +54,7 @@ RSpec.describe 'Create subscriptions' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      post api_v1_subscriptions_path, headers: headers, params: JSON.generate(subscription: sub_params)
+      post api_v1_subscriptions_path, headers: headers, params: JSON.generate(sub_params)
 
       subscription_response = JSON.parse(response.body, symbolize_names: true)
 
@@ -66,7 +66,7 @@ RSpec.describe 'Create subscriptions' do
       expect(response.status).to eq(400)
       expect(subscription_response).to have_key(:data)
       expect(subscription_response[:data]).to have_key(:error)
-      expect(subscription_response[:data][:error]).to eq('Customer must exist')
+      expect(subscription_response[:data][:error]).to eq("Customer can't be blank and Customer must exist")
     end
 
     it 'error with missing tea id' do
@@ -79,7 +79,7 @@ RSpec.describe 'Create subscriptions' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      post api_v1_subscriptions_path, headers: headers, params: JSON.generate(subscription: sub_params)
+      post api_v1_subscriptions_path, headers: headers, params: JSON.generate(sub_params)
 
       subscription_response = JSON.parse(response.body, symbolize_names: true)
 
@@ -91,7 +91,7 @@ RSpec.describe 'Create subscriptions' do
       expect(response.status).to eq(400)
       expect(subscription_response).to have_key(:data)
       expect(subscription_response[:data]).to have_key(:error)
-      expect(subscription_response[:data][:error]).to eq('Tea must exist')
+      expect(subscription_response[:data][:error]).to eq("Tea can't be blank and Tea must exist")
     end
 
     it 'error with missing price' do
@@ -104,7 +104,7 @@ RSpec.describe 'Create subscriptions' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      post api_v1_subscriptions_path, headers: headers, params: JSON.generate(subscription: sub_params)
+      post api_v1_subscriptions_path, headers: headers, params: JSON.generate(sub_params)
 
       subscription_response = JSON.parse(response.body, symbolize_names: true)
 
@@ -116,7 +116,7 @@ RSpec.describe 'Create subscriptions' do
       expect(response.status).to eq(400)
       expect(subscription_response).to have_key(:data)
       expect(subscription_response[:data]).to have_key(:error)
-      expect(subscription_response[:data][:error]).to eq("Price can't be blank")
+      expect(subscription_response[:data][:error]).to eq('Price is not a number')
     end
 
     it 'error with missing frequency' do
@@ -129,7 +129,7 @@ RSpec.describe 'Create subscriptions' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      post api_v1_subscriptions_path, headers: headers, params: JSON.generate(subscription: sub_params)
+      post api_v1_subscriptions_path, headers: headers, params: JSON.generate(sub_params)
 
       subscription_response = JSON.parse(response.body, symbolize_names: true)
 
@@ -141,7 +141,7 @@ RSpec.describe 'Create subscriptions' do
       expect(response.status).to eq(400)
       expect(subscription_response).to have_key(:data)
       expect(subscription_response[:data]).to have_key(:error)
-      expect(subscription_response[:data][:error]).to eq("Frequency can't be blank")
+      expect(subscription_response[:data][:error]).to eq('Frequency is not a number')
     end
   end
 end

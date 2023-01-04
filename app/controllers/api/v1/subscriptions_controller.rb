@@ -15,13 +15,16 @@ module Api
       end
 
       def update
-        subscription = Subscription.find(params[:subscription][:id])
-        subscription.update(subscription_params)
-        render json: { 'data': { 'success': 'Your subscriptions have been updated' } }
+        subscription = Subscription.find(params[:id])
+        if subscription.update(subscription_params)
+          render json: { 'data': { 'success': 'Your subscriptions have been updated' } }
+        else
+          render json: { 'data': { 'error': subscription.errors.full_messages.to_sentence } }, status: 400
+        end
       end
 
       def index
-        customer = Customer.find(params[:subscription][:customer_id])
+        customer = Customer.find(params[:customer_id])
         subscriptions = customer.subscriptions
         render json: SubscriptionSerializer.customer_subscriptions(subscriptions)
       end
@@ -29,7 +32,7 @@ module Api
       private
 
       def subscription_params
-        params.require(:subscription).permit(
+        params.permit(
           :customer_id,
           :tea_id,
           :title,
