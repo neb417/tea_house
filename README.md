@@ -32,7 +32,6 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#apis">APIs</a></li>
     <li><a href="#contacts">Contacts</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
  
