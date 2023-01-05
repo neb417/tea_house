@@ -201,7 +201,7 @@ query params
 * UPDATE a customer subscription
 ```sh
 Postman:
-PUT http://localhost:3000/api/v1/subscriptions/4
+PATCH http://localhost:3000/api/v1/subscriptions/4
 
 query params
   key: id, value: 4

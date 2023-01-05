@@ -23,7 +23,7 @@ RSpec.describe 'Create subscriptions' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      put api_v1_subscription_path(subscription), headers: headers, params: JSON.generate(sub_params)
+      patch api_v1_subscription_path(subscription), headers: headers, params: JSON.generate(sub_params)
 
       subscription_response = JSON.parse(response.body, symbolize_names: true)
 
@@ -51,7 +51,7 @@ RSpec.describe 'Create subscriptions' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      put api_v1_subscription_path(subscription), headers: headers, params: JSON.generate(sub_params)
+      patch api_v1_subscription_path(subscription), headers: headers, params: JSON.generate(sub_params)
 
       subscription_response = JSON.parse(response.body, symbolize_names: true)
 
@@ -75,7 +75,7 @@ RSpec.describe 'Create subscriptions' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      put api_v1_subscription_path(subscription), headers: headers, params: JSON.generate(sub_params)
+      patch api_v1_subscription_path(subscription), headers: headers, params: JSON.generate(sub_params)
 
       subscription_response = JSON.parse(response.body, symbolize_names: true)
 
@@ -99,7 +99,7 @@ RSpec.describe 'Create subscriptions' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      put api_v1_subscription_path(subscription), headers: headers, params: JSON.generate(sub_params)
+      patch api_v1_subscription_path(subscription), headers: headers, params: JSON.generate(sub_params)
 
       subscription_response = JSON.parse(response.body, symbolize_names: true)
 
@@ -123,7 +123,7 @@ RSpec.describe 'Create subscriptions' do
 
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
-      put api_v1_subscription_path(subscription), headers: headers, params: JSON.generate(sub_params)
+      patch api_v1_subscription_path(subscription), headers: headers, params: JSON.generate(sub_params)
 
       subscription_response = JSON.parse(response.body, symbolize_names: true)
 
